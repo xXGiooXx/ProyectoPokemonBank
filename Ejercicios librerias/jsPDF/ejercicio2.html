@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factura Básica ejemplo2 jspdf</title>
+    <!--Inclusión de la biblioteca jsPDF-->
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <h1>Generador de Factura Básica</h1> 
+    <button onclick="generarFactura()">Generar Factura</button>
+    <script>
+        /**Funcion para generar factura*/
+        function generarFactura() {
+            var doc = new jspdf.jsPDF();
+            
+            //Configuración de título y detalles de la factura//
+            doc.setFontSize(20);
+            doc.text('Factura', 105, 20, null, null, 'center');
+
+            //Fecha y número de factura//
+            doc.setFontSize(12);
+            doc.text('Fecha: ' + new Date().toLocaleDateString(), 20, 40);
+            doc.text('Número de Factura: 123456', 20, 50);
+
+            //Cabecera de los detalles del producto//
+            doc.text('Descripción', 20, 70);
+            doc.text('Cantidad', 80, 70);
+            doc.text('Precio Unitario', 120, 70);
+            doc.text('Total', 170, 70);
+
+            //Productos específicos listados//
+            doc.text('Producto 1', 20, 80);
+            doc.text('2', 80, 80);
+            doc.text('$10.00', 120, 80);
+            doc.text('$20.00', 170, 80);
+
+            doc.text('Producto 2', 20, 90);
+            doc.text('1', 80, 90);
+            doc.text('$15.00', 120, 90);
+            doc.text('$15.00', 170, 90);
+            
+            //Línea para separar los detalles del total//
+            doc.setLineWidth(0.5);
+            doc.line(20, 100, 190, 100);
+
+            //Mostrar el total//
+            doc.setFontSize(14);
+            doc.text('Total: $35.00', 170, 110, null, null, 'right');
+
+            //Guardar el documento generado//
+            doc.save('factura.pdf');
+        }
+    </script>
+</body>
+</html>

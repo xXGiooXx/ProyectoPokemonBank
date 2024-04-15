@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ejercicio2 ValidateJS</title>
+    <!--Importación de ValidateJS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    <!--Formulario para registrar un nombre con validación de entrada-->
+    <form id="registroForm">
+        <label for="nombre">Nombre:</label>
+         <!--Campo de entrada para el nombre, marcado como requerido en HTML para validación básica-->
+        <input type="text" id="nombre" name="nombre" required>
+        <button type="submit">Registrar</button>
+    </form>
+
+    <script>
+        //Define las restricciones de validación para el formulario//
+        var constraints = {
+            nombre: {
+                presence: true, //El nombre debe estar presente//
+                length: {
+                    minimum: 5, //El nombre debe tener al menos 5 caracteres//
+                    message: "debe tener al menos 5 caracteres" //Mensaje personalizado en caso de error//
+                }
+            }
+        };
+
+        var form = document.getElementById('registroForm');
+
+        //Escucha el evento de envío del formulario//
+        form.addEventListener('submit', function(event) {
+            var nombre = document.getElementById('nombre').value; //Obtiene el valor del campo nombre//
+            var errors = validate({nombre: nombre}, constraints);
+            
+//Si hay errores, evita el envío del formulario y muestra una alerta//
+            if (errors) {
+                event.preventDefault(); //Detener la acción por defecto//
+                alert("Errores en el formulario: " + JSON.stringify(errors)); //Muestra los errores en una alerta//
+            }
+        });
+    </script>
+</body>
+</html>

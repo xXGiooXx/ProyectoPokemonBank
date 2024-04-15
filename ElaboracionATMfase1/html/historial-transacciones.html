@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--Título de la página-->
+    <title>Pokémon Bank - Historial de Transacciones</title>
+    <!--Enlace a la hoja de estilos de Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+     <!--Enlace a propia hoja de estilos-->
+    <link rel="stylesheet" href="../css/style-historial-transacciones.css">
+     <link rel="stylesheet" href="../css/style-acciones.css">
+     <!--Icono de la pagina-->
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+</head>
+<body>
+<!--Contenedor principal-->
+<div class="container mt-5">
+   <!--Título principal-->
+    <h2>Historial de Transacciones</h2>
+    <!--Contenedor de la tabla-->
+    <div class="table-responsive">
+<!--Tabla para mostrar el historial de transacciones-->
+        <table class="table">
+            <!-- Encabezados de la tabla-->
+            <thead>
+                <tr>
+                    <!--Columna para el número de transacción-->
+                    <th>#</th>
+                    
+                    <!-- Columna para la fecha de la transacción-->
+                    <th>Fecha</th>
+                    
+                    <!--Columna para el tipo de transacción-->
+                    <th>Tipo</th>
+                    
+                    <!--Columna para el monto de la transacción-->
+                    <th>Monto</th>
+                    
+                    <!--Columna para la descripción de la transacción-->
+                    <th>No. Referencia</th>
+                    
+                    <!--Columna para la descripción de la transacción-->
+                    <th>Concepto</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+             <tr>
+                <td>1</td>
+                <td>13/04/2024</td>
+                <td>Transferencia</td>
+                <td>$25.50</td>
+                <td>987654321</td>
+                <td>Farmacia</td>
+            </tr>
+            </tbody>
+        </table>
+        <!--Botón para regresar a la página anterior-->
+        <button onclick="location.href='../html/consulta-saldo.html'" class="btn-regresar">Regresar</button>
+    </div>
+    <div class="row mt-4">
+                <div class="col text-center">
+                    <button class="btn btn-primary" onclick="location.href='../html/historial-transacciones.html'">Análisis Grafico</button>
+                </div>
+        </div>
+</div>
+</body>
+</html>

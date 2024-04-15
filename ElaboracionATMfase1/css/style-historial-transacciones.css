@@ -1,0 +1,66 @@
+/*Estilos para el cuerpo del documento*/
+body {
+    background-color: #f5f5f5; /*Un fondo suave para la página*/
+    
+}
+
+/*Estilos para el título principal*/
+.container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px; /*Bordes redondeados para el contenedor*/
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /*Sombra suave para dar profundidad*/
+    margin-top: 30px; /*Espaciado superior*/
+}
+
+/*Estilos para el título principal*/
+h2 {
+    color: #333333;
+    margin-bottom: 20px; /*Espaciado inferior*/
+}
+
+/*Estilos para la tabla*/
+.table {
+    margin-top: 20px; /*Espaciado superior*/
+}
+
+/*Estilos para los encabezados de la tabla*/
+.table th {
+    background-color: #F2BE22; /*Color de Bootstrap para los encabezados*/
+    color: black;
+}
+
+/*Estilos para las celdas de la tabla*/
+.table td {
+    color: #555555;
+}
+
+/*Estilos para las filas impares de la tabla*/
+.table tbody tr:nth-child(odd) {
+    background-color: #f8f9fa; /*intercalado de colores*/
+}
+
+/*Estilos para las filas de la tabla al pasar el mouse*/
+.table-hover tbody tr:hover {
+    background-color: #e9ecef; /*Color al pasar el mouse*/
+}
+
+/*Estilos actualizados para el botón de Regresar*/
+.btn-regresar {
+    position: absolute; /*Posición absoluta respecto al contenedor*/
+    bottom: 20px; /*Abajo a 20px del borde del contenedor*/
+    right: 20px; /*Derecha a 20px del borde del contenedor*/
+    padding: 10px 20px; /*Espaciado interno del botón*/
+    background-color: #D95F18; /*Color de fondo del botón*/
+    color: white; /*Color del texto del botón*/
+    border: none; /*Sin borde */
+    border-radius: 5px; /*Bordes redondeados*/
+    cursor: pointer; /*Cambia el cursor al pasar por encima*/
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /*Sombra suave*/
+    transition: background-color 0.2s; /*Transición suave al cambiar el color de fondo*/
+}
+
+/*Estilos para el botón de Regresar al pasar el mouse*/
+.btn-regresar:hover {
+    background-color: #F2BE22; /*Cambio de color de fondo al pasar el mouse sobre el botón de Regresar*/
+}

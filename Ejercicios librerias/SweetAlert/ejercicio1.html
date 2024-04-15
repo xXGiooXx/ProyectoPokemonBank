@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo1 SweetAlert</title>
+  <link rel="stylesheet" href="ejercicio1.css">
+  <!--Enlace al archivo CSS de SweetAlert-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css">
+</head>
+<body>
+<!--Inicio del formulario de registro-->
+<form id="registrationForm">
+    <!--Campo para ingresar el nombre-->
+  <input type="text" placeholder="Nombre" required><br>
+  <!--Campo para ingresar el correo electrónico-->
+  <input type="email" placeholder="Correo electrónico" required><br>
+  <!--Botón para enviar el formulario-->
+  <button type="submit">Registrarse</button>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+    //Agregar un evento al enviar el formulario//
+  document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      //Evitar que el formulario se envíe automáticamente//
+    event.preventDefault();
+       //Mostrar un mensaje de registro exitoso utilizando SweetAlert2//
+    Swal.fire({
+      title: '¡Registro exitoso!',
+      html: '¡Gracias por registrarte! Te hemos enviado un correo de confirmación.',
+      icon: 'success',
+      confirmButtonText: 'Aceptar'
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+body {
+    font-family: Arial, sans-serif; /*Establece la fuente de texto para todo el cuerpo del documento como Arial o cualquier fuente sans-serif*/
+}
+
+canvas {
+    border: 1px solid #ddd; /*Agrega un borde de 1px sólido con color gris claro alrededor del elemento canvas*/
+    border-radius: 5px; /*Agrega esquinas redondeadas al elemento canvas*/
+    margin-top: 20px; /*Agrega un margen superior de 20px al elemento canvas*/
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!--Icono de la pagina-->
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/style-acciones.css">
+    <title>Pokémon Bank - Acciones</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logo text-center mt-4">
+            <img src="../img/logo.png" alt="Logo de Pokémon Bank" class="img-fluid" style="max-width: 300px;">
+        </div>
+        <br>
+        <br>
+        <div class="account-info text-center mb-4">
+            <p><strong style="font-size: 20px">Nombre del titular:</strong> Ash Ketchum</p>
+            <p><strong style="font-size: 20px">Número de cuenta:</strong> 1234567890</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card action" onclick="location.href='../html/deposito.html'">
+                    <div class="card-body text-center">
+                        <i class="fa-solid fa-hand-holding-dollar fa-3x"></i>
+                        <h3 class="card-title mt-3">DEPOSITO</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card action" onclick="location.href='../html/retiro.html'">
+                    <div class="card-body text-center">
+                        <i class="fa-solid fa-dollar-sign fa-3x"></i>
+                        <h3 class="card-title mt-3">RETIRO</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card action" onclick="location.href='../html/consulta-saldo.html'">
+                    <div class="card-body text-center">
+                        <i class="fa-solid fa-coins fa-3x"></i>
+                        <h3 class="card-title mt-3">CONSULTA SALDO</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card action" onclick="location.href='../html/pago-servicios.html'">
+                    <div class="card-body text-center">
+                        <i class="fa-regular fa-credit-card fa-3x"></i>
+                        <i class="fa-solid fa-receipt fa-3x"></i>
+                        <h3 class="card-title mt-3">PAGO DE SERVICIOS</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="logout text-center mt-4">
+            <button class="btn btn-secondary btn-lg" onclick="logout()">SALIR</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,13 @@
+   body {
+            background-color: #f0f0f0;
+        }
+        .action {
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .action:hover {
+            background-color: #f0f0f0;
+        }
+        .btn-primary{
+            background-color: #3853a3;
+        }   
