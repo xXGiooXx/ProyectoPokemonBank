@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/style-acciones.css">
+    <title>Pokémon Bank - Análisis de Transacciones</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="logo text-center mt-4">
+            <img src="../img/logo.png" alt="Logo de Pokémon Bank" class="img-fluid" style="max-width: 300px;">
+        </div>
+        <br>
+        <h2 class="text-center mb-4">Análisis de Transacciones</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="transactionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Datos de ejemplo para el gráfico
+        var transactionData = {
+            labels: ['Depósitos', 'Retiros', 'Pagos de Servicios', 'Transferencias'],
+            data: [25, 15, 40, 20]
+        };
+
+        // Configuración del gráfico
+        var ctx = document.getElementById('transactionChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: transactionData.labels,
+                datasets: [{
+                    label: 'Cantidad',
+                    data: transactionData.data,
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        stepSize: 10
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Distribución de Transacciones'
+                    },
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
